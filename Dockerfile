@@ -11,8 +11,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PATH=/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
     PYTHON=/venv/bin/python \
     PIP=/venv/bin/pip \
-    RTD_COMMIT=e4958838a512b095d0bc8cdf8617c30cc9e489d4
-# RTD_COMMIT -> Use the commit `e495883` - 2016-01-06
+    RTD_COMMIT=59229088f75203ac1a3077a7e49ae49f88b35ac0
+# RTD_COMMIT -> Use the commit `59229088f75` - 2017-10-09
 # You can change to master but this will not ensure that the docker-compose works
 # https://github.com/rtfd/readthedocs.org/archive/master.zip
 
