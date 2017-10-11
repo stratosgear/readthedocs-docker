@@ -3,6 +3,8 @@ try:
 except ImportError:
     print "Fail to import readthedocs.settings.sqlite"
 
+#CommunityBaseSettings.load_settings(__name__)
+
 import os
 environ = os.environ
 
@@ -19,6 +21,14 @@ if os.getenv('RTD_HAS_DATABASE', 'false').lower() == 'true':
             'PORT': os.getenv('DB_ENV_PORT', 5432),
         }
     }
+#else:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(SITE_ROOT, 'dev.db'),
+#        }
+#    }
+
 
 if os.getenv('RTD_HAS_ELASTICSEARCH', 'false').lower() == 'true':
     ES_HOSTS = [
@@ -64,6 +74,9 @@ SLUMBER_API_HOST = os.getenv('RTD_SLUMBER_API_HOST', 'http://localhost:8000')
 GLOBAL_ANALYTICS_CODE = os.getenv('RTD_GLOBAL_ANALYTICS_CODE', '')
 
 FILE_SYNCER = 'privacy.backends.syncers.LocalSyncer'
+
+#SECRET_KEY='hgsdf76tr397rg326rg76r7r7rf6r6f76r757T&^T&^R^FFysghsgh'
+#ALLOWED_HOSTS = ['localhost', 'localhost:8000']
 
 # Users
 ADMIN_USERNAME = os.getenv('RTD_ADMIN_USERNAME', 'admin')
